@@ -42,6 +42,6 @@ RUN set -x \
 VOLUME "$SONARQUBE_HOME/data"
 
 WORKDIR $SONARQUBE_HOME
-COPY 7/community/run.sh $SONARQUBE_HOME/bin/
+COPY run.sh $SONARQUBE_HOME/bin/
 USER sonarqube
 ENTRYPOINT ["./bin/run.sh"]
