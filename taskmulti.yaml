@@ -1,7 +1,7 @@
 version: v1.0.0
 steps:
 # Build target image
-- build: -t {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}} -f Dockerfile --build-arg REGISTRY_NAME=$ACR_NAME.azurecr.io .
+- build: -t {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}} -f Dockerfile --build-arg REGISTRY_NAME={{.Run.Registry}}.azurecr.io .
   disableWorkingDirectoryOverride: true
   workingDirectory: 7/community
 # Push image
