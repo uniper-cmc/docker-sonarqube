@@ -1,0 +1,9 @@
+version: v1.0.0
+steps:
+# Build target image
+- build: -t {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}} -f Dockerfile .
+  disableWorkingDirectoryOverride: true
+  workingDirectory: 7/community
+# Push image
+- push:
+  - {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}}
