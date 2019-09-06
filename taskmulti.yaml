@@ -1,7 +1,7 @@
 version: v1.0.0
 steps:
 # Build target image
-- build: -t {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}} --build-arg REGISTRY_NAME={{.Run.Registry}} 7/community
+- build: -t {{.Run.Registry}}/appimages/sonarqube:7.9.1-community --build-arg REGISTRY_NAME={{.Run.Registry}} 7/community
 # Push image
 - push:
-  - {{.Run.Registry}}/appimages/sonarqube:{{.Run.ID}}
+  - {{.Run.Registry}}/appimages/sonarqube:7.9.1-community
